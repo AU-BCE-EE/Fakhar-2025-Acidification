@@ -1,0 +1,13 @@
+rm(list = ls())
+setwd("~/Documents/GitHub/Fakhar-2025-Acidification/NH3/R Scripts")
+
+source('packages.R')
+source('functions.R')
+source('load.R')
+source('clean.R')
+source('settings.R')
+source('weather.R')
+source('background.R')
+source('flux.R')
+source('plots.R')
+source('export.R')
