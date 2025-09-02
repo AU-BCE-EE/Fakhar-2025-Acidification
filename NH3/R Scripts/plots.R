@@ -50,7 +50,7 @@ Fluxes <- ggplot(dat_summary, aes(x = elapsed.time, y = mean_flux, color = group
 #Ploting Tan
 Tan <- ggplot(dat_tan_summary, aes(x = elapsed.time, y = mean, color = group, fill = group)) +
   geom_ribbon(aes(ymin = mean - sd, ymax = mean + sd), alpha = 0.3, color = NA) +  
-  geom_line(size = 1) +  
+  geom_line(linewidth = 1) +  
   geom_point(size = 2, shape = 16, alpha = 0.7) +  
   scale_color_manual(values = category_colors, labels = c("Acid treatment", "Control")) +  
   scale_fill_manual(values = category_colors, labels = c("Acid treatment", "Control")) + 

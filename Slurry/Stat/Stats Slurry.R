@@ -7,7 +7,7 @@ library(multcompView)
 
 
 #loading data
-data <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Slurry/Stat/Stat data.csv')
+data <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Slurry/Stat/Raw stat.csv')
 #Get slurry parameters
 paramtr <- unique(data$parameter)
 

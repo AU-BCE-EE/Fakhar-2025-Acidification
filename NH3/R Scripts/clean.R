@@ -13,8 +13,7 @@ da <- filter(da, !(da$id == lead(da$id)))
 
 #Remove id changing ids from 1-19#
 da <- da[da$id == '1' | da$id == '2' | da$id == '3' | da$id == '4' | da$id == '5' | da$id == '6' | da$id == '7' | 
-           da$id == '8' | da$id == '9' | da$id == '10' | da$id == '11' | da$id == '12' | da$id == '13' | da$id == '14' |
-           da$id == '15' | da$id == '16' | da$id == '17' | da$id == '18' | da$id == '19', ]
+           da$id == '8' | da$id == '9', ]
 
 #Ordering data according to id#
 split_id <- split(da, f = da$id)
