@@ -1,10 +1,13 @@
 rm(list = ls())
 
+#Setting working directory
+setwd('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Lab')
+
 #library
 library(ggplot2)
 
 #Importing data
-acid <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Lab/Acid level requirement.csv')
+acid <- read.csv('Acid level requirement.csv')
 
 #Defining the pH selected point
 x_line <- acid$mean[acid$s.no == 8] 

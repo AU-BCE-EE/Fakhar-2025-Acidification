@@ -1,7 +1,12 @@
 rm(list = ls())
 
-pc <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Correlation/PC data.csv')
+#Setting working directory
+setwd('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Correlation')
 
+#Loading data
+pc <- read.csv('PC data.csv')
+
+#Selecting variables
 vars <- c("pH", "TAN", "TS", "EC", "NO3")
 
 # Pearson correlation for NH3

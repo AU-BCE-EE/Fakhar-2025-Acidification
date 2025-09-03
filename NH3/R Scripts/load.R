@@ -2,7 +2,7 @@
 #----- Loading picarro data ------------
 ########################################################################################
 
-da <- readCRDS(('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/NH3/Raw data'), From = '30.06.2025 07:12:00', To = '07.07.2025 07:04:42', mult = F, tz = "UTC", rm = F)
+da <- readCRDS(('Raw data/Picarro'), From = '30.06.2025 07:12:00', To = '07.07.2025 07:04:42', mult = F, tz = "UTC", rm = F)
 
 #Making date time stamp#
 
@@ -18,7 +18,7 @@ da$TIME <- format(da$st, format = "%H:%M:%S")
 #----- Loading Weather data ------------
 ########################################################################################
 #Import Weather Data and filter data#
-weather <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Weather/weather data.csv', fill = T, stringsAsFactors = F)
+weather <- read.csv('Raw data/Other/weather data.csv', fill = T, stringsAsFactors = F)
 weather <- weather[, -c(4, 5)]
 
 ########################################################################################
@@ -29,6 +29,6 @@ weather <- weather[, -c(4, 5)]
 ########################################################################################
 #Import Tan Data#
 header <- c('Id', 'Treatment', 'g Slurry', 'Dilution Factor', 'N-NH4', 'N-NH4 mg/L')
-Tan <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/NH3/Raw data/TAN analysis.csv', fill = T, stringsAsFactors = F)
+Tan <- read.csv('Raw data/Other/TAN analysis.csv', fill = T, stringsAsFactors = F)
 Tan <- Tan [, -c(1, 3:5)]
 Tan$treatment <- as.factor(Tan$treatment)

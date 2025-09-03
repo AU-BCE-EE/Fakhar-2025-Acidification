@@ -1,3 +1,8 @@
+rm(list = ls())
+
+#Setting working directory
+setwd('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/N2O/R Script')
+
 # Load required libraries
 library(dplyr)
 library(ggplot2)
@@ -7,7 +12,7 @@ library(car)
 library(emmeans)
 library(agricolae)
 
-data <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/N2O/Raw data/N2Ostat.csv')
+data <- read.csv('Data/N2Ostat.csv')
 #fix data by make tittle row
 fix_colnames <- function(df) {
   colnames(df) <- df[1, ]

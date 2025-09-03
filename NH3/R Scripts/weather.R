@@ -27,8 +27,8 @@ dat$date.time <- round_date(dat$date.time, unit = "hour")
 
 #Convert both to POSIXct#
 weather$date.time.weather <- sprintf("%s %02d:00", weather$date, weather$time)
-weather$date.time.weather <- as.POSIXct(weather$date.time.weather, format = '%Y-%m-%d %H:%M', tz = "EST")
-dat$date.time <- as.POSIXct(dat$date.time, format = '%Y-%m-%d %H:%M', tz = "EST")
+weather$date.time.weather <- as.POSIXct(weather$date.time.weather, format = '%Y-%m-%d %H:%M', tz = "UTC")
+dat$date.time <- as.POSIXct(dat$date.time, format = '%Y-%m-%d %H:%M', tz = "UTC")
 head(weather$date.time.weather)
 
 #Merging data#

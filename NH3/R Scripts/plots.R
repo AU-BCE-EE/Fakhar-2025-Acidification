@@ -15,7 +15,7 @@ category_colors <- c(
 #Plot NH3 flux#
 Fluxes <- ggplot(dat_summary, aes(x = elapsed.time, y = mean_flux, color = group, fill = group)) +
   geom_ribbon(aes(ymin = mean_flux - sd_flux, ymax = mean_flux + sd_flux), alpha = 0.4, color = NA) +  
-  geom_line(size = 1) +  # Mean flux line
+  geom_line(linewidth = 1) +  # Mean flux line
   scale_color_manual(values = category_colors) +  
   scale_fill_manual(values = category_colors)  +
   # Axis labels and title

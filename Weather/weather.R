@@ -1,15 +1,16 @@
 rm(list = ls())
 
+#Setting working directory
+setwd('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Weather')
+
 library(ggplot2)
-library(readxl)
 library(tidyr)
 library(dplyr)
-library(ggbreak)
 library(patchwork)
 
 # Read and format data
-daily <- read.csv("//Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Weather/Daily.csv")
-hourly <- read.csv("/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Weather/weatherhour.csv")
+daily <- read.csv("Daily.csv")
+hourly <- read.csv("weatherhour.csv")
 hourly <- hourly[!duplicated(hourly$elapsed.time), ]
 
 #change date format

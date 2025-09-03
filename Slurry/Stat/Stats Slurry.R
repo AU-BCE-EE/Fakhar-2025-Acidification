@@ -1,5 +1,8 @@
 rm(list = ls())
 
+#Setting working directory
+setwd('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Slurry/Stat')
+
 #Library
 library(dplyr)
 library(agricolae)
@@ -7,7 +10,7 @@ library(multcompView)
 
 
 #loading data
-data <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/Slurry/Stat/Raw stat.csv')
+data <- read.csv('Raw stat.csv')
 #Get slurry parameters
 paramtr <- unique(data$parameter)
 

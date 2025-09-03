@@ -1,3 +1,6 @@
+rm(list = ls())
+setwd("~/Documents/GitHub/Fakhar-2025-Acidification/NH3/R Scripts")
+
 # Load required libraries
 library(dplyr)
 library(ggplot2)
@@ -6,7 +9,7 @@ library(lmerTest)
 library(car)
 library(emmeans)
 
-data <- read.csv('/Users/AU775281/Documents/GitHub/Fakhar-2025-Acidification/NH3/Raw data/NH3stat.csv')
+data <- read.csv('Raw data/Stat/NH3stat.csv')
 
 #fix data by make tittle row
 fix_colnames <- function(df) {
